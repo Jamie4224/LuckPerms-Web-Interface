@@ -67,4 +67,4 @@ SOFTWARE.
 
 // Do you agree with the above license?
 // To accept make the variable 'true'
-$license_agreed = "true";
+$license_agreed = "false";
