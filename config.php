@@ -3,6 +3,8 @@
 // Main url without 'www.' and an ending slash '/'
 // Main url example: 'http://example.com'
 $website_mainurl = "";
+// Define error reporting
+error_reporting(1);
 
 // Login settings
 // Choose between superuser(Just one root account) or sql(Coming soon)
