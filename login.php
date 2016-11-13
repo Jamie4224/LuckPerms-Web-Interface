@@ -129,7 +129,7 @@ if($current_user_is_logged_in == "true"){
     <li class="w3-right"><a class="w3-text-white w3-hover-dark-grey" href="/login.php?action=logout">Logout</a></li>
   </ul>
 <?php
-}elseif($current_user_is_logged_in == "false"){
+}else{
 ?>
   <ul class="w3-navbar w3-blue w3-large">
     <li><a class="w3-text-white w3-hover-red" href="/">MC PControl</a></li>
@@ -173,6 +173,16 @@ if(isset($_GET['action'])){
 			<?php
 		}
 		die();
+	}
+}
+
+// Check if the get variable 'message' is defined
+if(isset($_GET['message'])){
+	// Set the get variable
+	$message = $_GET['message'];
+	// Check if the get variable is 'login'
+	if($message == "noperms"){
+		$error[] = "You have no permission to view that page";
 	}
 }
 // Check if user is logged in
